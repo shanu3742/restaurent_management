@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'restaurent';
+  /**
+   * default navigationPath is 
+   * recipes
+   */
+  navigateUrl:string='recipes';
+  
+  handleNavigation(event:string){
+     this.navigateUrl = event;
+  }
 }
