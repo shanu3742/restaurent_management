@@ -7,6 +7,11 @@ import { Recipe } from './recipes.interface';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent {
+ selectedRecipe!:Recipe
 
+
+  getSelectedRecipe(selectedRecipe:Recipe){
+    this.selectedRecipe=selectedRecipe;
+  }
 
 }

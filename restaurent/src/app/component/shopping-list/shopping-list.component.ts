@@ -18,4 +18,9 @@ export class ShoppingListComponent {
     }
   ]
 
+  addIngriidient(ingrident:Ingredient){
+    //this.ingredients.push({name:name,ammount:0});
+    this.ingredients.push({name:ingrident.name,ammount:ingrident.ammount});
+  }
+
 }

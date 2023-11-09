@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Output,EventEmitter} from '@angular/core';
 import { Recipe } from '../recipes.interface';
 
 @Component({
@@ -21,14 +21,18 @@ export class RecipesListComponent {
       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnMdHtT7yykZlFgdzgHjfrJm0IwvjGaqK2Bg&usqp=CAU'
     },
     {
-      id: '02',
+      id: '03',
       name:'Homemade Cannoli' ,
       description: 'seriously strong coffee and a cannoli',
       image:'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/4/24/2/ED0203_homemade-cannoli_s4x3.jpg.rend.hgtvcom.511.288.suffix/1433592011573.jpeg'
     }
   ];
+  @Output() handleRecipeSelection= new EventEmitter<Recipe>()
   constructor(){}
   ngOnInit(){}
+  handleRecipeSelect(selectedRecipe:Recipe){
+    this.handleRecipeSelection.emit(selectedRecipe)
+  }
 
 }
     
