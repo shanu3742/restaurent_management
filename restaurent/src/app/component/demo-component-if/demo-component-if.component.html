@@ -1,0 +1,4 @@
+<input id="showInput" type="checkbox" [(ngModel)]="showInput" />
+<label for="showInput">Show conditional header</label>
+<h2 *appIf="showInput">My conditional header</h2>
+<h2 *appIf="!showInput">My not conditional header</h2>
