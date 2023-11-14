@@ -5,6 +5,7 @@ selector:'[appIf]'
 export class CustomIf{
 
 private show =false;
+
 @Input('appIf') set  onCondition(condition:boolean){
     this.show=condition;
     /**
@@ -16,6 +17,7 @@ private show =false;
      */
      this.displayElement()
 }
+@Input() appElseIf?:TemplateRef<unknown>;
 
 constructor(private templateRef:TemplateRef<unknown>, private vcr: ViewContainerRef){
 
@@ -32,8 +34,14 @@ ngOnInit(){
      this.displayElement()
 }
 displayElement(){
+    console.log('templateRef',this.templateRef)
+    console.log('else if ',this.appElseIf)
     if(this.show){
         this.vcr.createEmbeddedView(this.templateRef)
+    }else if(this.appElseIf){
+        console.log('else if ',this.appElseIf)
+
+        this.vcr.createEmbeddedView(this.appElseIf as any)
     }
 }
 

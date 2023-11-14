@@ -14,6 +14,8 @@ import { AppHover } from 'src/directory/hover.directive';
 import { DemoComponentIfComponent } from './component/demo-component-if/demo-component-if.component';
 import { FormsModule } from '@angular/forms';
 import { CustomIf } from 'src/directory/customIf.directive';
+import { AppDropDown } from 'src/directory/dropdown.directive';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CustomIf } from 'src/directory/customIf.directive';
     ShoppingEditComponent,
     AppHover,
     DemoComponentIfComponent,
-    CustomIf
+    CustomIf,
+    AppDropDown
+  
     
   ],
   imports: [
