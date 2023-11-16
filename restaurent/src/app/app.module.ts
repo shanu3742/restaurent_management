@@ -15,6 +15,8 @@ import { DemoComponentIfComponent } from './component/demo-component-if/demo-com
 import { FormsModule } from '@angular/forms';
 import { CustomIf } from 'src/directory/customIf.directive';
 import { AppDropDown } from 'src/directory/dropdown.directive';
+import { DemoServiceComponent } from './component/demo_service/demo/demo.service.component';
+import { DemoServiceModule } from './component/demo_service/demo-service.module';
 
 
 @NgModule({
@@ -30,14 +32,16 @@ import { AppDropDown } from 'src/directory/dropdown.directive';
     AppHover,
     DemoComponentIfComponent,
     CustomIf,
-    AppDropDown
+    AppDropDown,
+    
   
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    DemoServiceModule
     
   ],
   providers: [],
