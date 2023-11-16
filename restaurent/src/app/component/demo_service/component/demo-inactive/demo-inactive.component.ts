@@ -12,7 +12,8 @@ export class DemoInActiveComponent{
         this.users= this.userInfoService.inActiveUser
     }
     public handleActiveUser(userId:number){
-        this.userInfoService.sendToActiveUser(userId)   
+        this.userInfoService.sendToActiveUser(userId)   ;
+        this.userInfoService.alertHandle.emit('user update active state')
     }
 
 }
