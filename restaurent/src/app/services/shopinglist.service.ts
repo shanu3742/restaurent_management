@@ -28,5 +28,9 @@ export class ShopingListService{
         this.ingredients.push(ingredient)
         this.onIngridientChange.emit([...this.ingredients])
       }
+      addIngredients(ingridients:Ingredient[]){
+        this.ingredients.push(...ingridients)
+        this.onIngridientChange.emit([...this.ingredients])
+      }
     
 }
