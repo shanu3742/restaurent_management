@@ -9,6 +9,7 @@ import { Component, EventEmitter, Output } from "@angular/core";
 export class AppHeaderComponent {
     @Output() onNavigate = new EventEmitter<string>();
 
+
     onNavigation(navigatTo:string){
       
         this.onNavigate.emit(navigatTo);

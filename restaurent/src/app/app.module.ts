@@ -17,6 +17,7 @@ import { CustomIf } from 'src/directory/customIf.directive';
 import { AppDropDown } from 'src/directory/dropdown.directive';
 import { DemoServiceComponent } from './component/demo_service/demo/demo.service.component';
 import { DemoServiceModule } from './component/demo_service/demo-service.module';
+import { AppdemoroutrtModule } from './component/demo-router/appdemoroutrt.module';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { DemoServiceModule } from './component/demo_service/demo-service.module'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DemoServiceModule
+    DemoServiceModule,
+    AppdemoroutrtModule
     
   ],
   providers: [],
