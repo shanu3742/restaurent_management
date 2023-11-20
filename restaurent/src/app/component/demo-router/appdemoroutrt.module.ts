@@ -8,9 +8,14 @@ import { ServerComponent } from './servers/server/server.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes :Routes=[
+  {path:'', component:HomeComponent},
+  {path:'users',component:UsersComponent},
+  {path:'servers',component:ServersComponent}
 
-
+]
 @NgModule({
   declarations: [
     UserComponent,
@@ -19,11 +24,13 @@ import { HomeComponent } from './home/home.component';
     AppRouterDemoComponent,
     ServerComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   exports:[
     UserComponent,
