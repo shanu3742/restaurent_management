@@ -1,13 +1,15 @@
 <div class="row">
  <div class="col-xs-12">
-  <button class="btn btn-primary" (click) ="onReload()">Reload page</button>
+  <button class="btn btn-primary" (click) ="onReload(1)">Reload page</button>
  </div>
 </div>
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
       <a
-        href="#"
+       [routerLink]="['/servers','5','edit']"
+       [queryParams]="{allowEdit:'1',allowNotification:true}"
+       fragment="loading"
         class="list-group-item"
         *ngFor="let server of servers">
         {{ server.name }}

@@ -15,8 +15,10 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
     this.servers = this.serversService.getServers();
   }
-  onReload(){
-    this.router.navigate(['servers'],{relativeTo:this.route});
+  onReload(id:number){
+    // this.router.navigate(['servers'],{relativeTo:this.route});
+    this.router.navigate(['servers',id,'edit'],{queryParams:{allowEdit:'2',allowNotification:false},fragment:'error'})
 
   }
 }
+
