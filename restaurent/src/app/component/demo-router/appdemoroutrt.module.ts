@@ -8,8 +8,19 @@ import { ServerComponent } from './servers/server/server.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+ const appRoutes:Routes= [
+  {path:'',component:HomeComponent},
+  { path:'users', component:UsersComponent,children:[
+    {path:':id/:name',component:UserComponent},
+  ]},
+  {path:"servers",component:ServersComponent ,children:[
+    {path:':id',component:ServerComponent},
+    {path:':id/edit',component:EditServerComponent}
+  ]},
+  
+ ]
 
 @NgModule({
   declarations: [
@@ -24,6 +35,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   exports:[
     UserComponent,
