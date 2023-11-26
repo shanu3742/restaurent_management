@@ -7,7 +7,7 @@ import { Subscriber, Subscription } from 'rxjs';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit{
   user!: {id: number, name: string};
   paramsSubscription!:Subscription
 

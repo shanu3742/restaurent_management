@@ -30,7 +30,8 @@ import { RouterModule, Routes } from '@angular/router';
     AppRouterDemoComponent,
     ServerComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     CommonModule,
