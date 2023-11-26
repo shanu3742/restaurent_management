@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
  const appRoutes:Routes= [
   {path:'',component:HomeComponent},
@@ -19,6 +20,7 @@ import { RouterModule, Routes } from '@angular/router';
     {path:':id',component:ServerComponent},
     {path:':id/edit',component:EditServerComponent}
   ]},
+  {path:'**',component:PageNotFoundComponent}
   
  ]
 
@@ -31,6 +33,7 @@ import { RouterModule, Routes } from '@angular/router';
     ServerComponent,
     UsersComponent,
     HomeComponent,
+    PageNotFoundComponent
     
   ],
   imports: [
@@ -45,7 +48,8 @@ import { RouterModule, Routes } from '@angular/router';
     AppRouterDemoComponent,
     ServerComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ]
 })
 export class AppdemoroutrtModule { }
