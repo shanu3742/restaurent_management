@@ -10,13 +10,18 @@ import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGard } from './auth-gard.service';
 
  const appRoutes:Routes= [
   {path:'',component:HomeComponent},
   { path:'users', component:UsersComponent,children:[
     {path:':id/:name',component:UserComponent},
   ]},
-  {path:"servers",component:ServersComponent ,children:[
+  {path:"servers",
+  // canActivate:[AuthGard]
+  canActivateChild:[AuthGard],
+  component:ServersComponent ,
+  children:[
     {path:':id',component:ServerComponent},
     {path:':id/edit',component:EditServerComponent}
   ]},
