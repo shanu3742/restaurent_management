@@ -26,7 +26,7 @@ import { CanDeactivateGuard } from './servers/can-deactivate-guard.service';
     {path:':id',component:ServerComponent},
     {path:':id/edit',component:EditServerComponent,canDeactivate:[CanDeactivateGuard]}
   ]},
-  {path:'**',component:PageNotFoundComponent}
+  {path:'**',component:PageNotFoundComponent , data:{errorMessage:'Page Not Found'}}
   
  ]
 
