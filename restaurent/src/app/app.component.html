@@ -2,9 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-    <app-recipes *ngIf="navigateUrl==='recipes'"></app-recipes>
-    <app-shopping-list *ngIf="navigateUrl==='shoping-list'"></app-shopping-list>
-
+          <router-outlet></router-outlet>
     </div>
 
   </div>
@@ -12,4 +10,4 @@
 </div>
 <!-- <app-demo-component-if></app-demo-component-if> -->
 <!-- <app-demo-service></app-demo-service>  -->
-<app-router-root></app-router-root>
+<!-- <app-router-root></app-router-root> -->
