@@ -9,6 +9,7 @@ import { Recipe } from '../../recipes.interface';
 export class RecipesItemComponent {
   @Input() recipe!:Recipe;
   @Output() onRecipeSelect= new EventEmitter<Recipe>()
+  @Input() index! :number
 
   recipeSelect(recipeEvent:Recipe){
     this.onRecipeSelect.emit(recipeEvent)

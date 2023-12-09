@@ -60,5 +60,8 @@ export class RecipeService{
     getRecipes(){
         return[...this.recipe]
     }
+    getSelectedRecipes(recipeId:number){
+      return this.recipe[recipeId]
+    }
 
 }

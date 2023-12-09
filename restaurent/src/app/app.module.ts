@@ -17,6 +17,9 @@ import { CustomIf } from 'src/directory/customIf.directive';
 import { AppDropDown } from 'src/directory/dropdown.directive';
 import { DemoServiceComponent } from './component/demo_service/demo/demo.service.component';
 import { DemoServiceModule } from './component/demo_service/demo-service.module';
+import { RecipeStartComponent } from './recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './component/recipes/recipe-edit/recipe-edit.component';
+
 // import { AppdemoroutrtModule } from './component/demo-router/appdemoroutrt.module';
 
 
@@ -34,6 +37,8 @@ import { DemoServiceModule } from './component/demo_service/demo-service.module'
     DemoComponentIfComponent,
     CustomIf,
     AppDropDown,
+    RecipeStartComponent,
+    RecipeEditComponent,
     
   
     
