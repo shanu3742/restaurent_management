@@ -20,6 +20,7 @@ import { DemoServiceModule } from './component/demo_service/demo-service.module'
 import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './component/recipes/recipe-edit/recipe-edit.component';
 
+
 // import { AppdemoroutrtModule } from './component/demo-router/appdemoroutrt.module';
 
 
@@ -49,7 +50,8 @@ import { RecipeEditComponent } from './component/recipes/recipe-edit/recipe-edit
     FormsModule,
     DemoServiceModule,
     // AppdemoroutrtModule
-    AppRoutingModule
+    AppRoutingModule,
+    
     
   ],
   providers: [],
