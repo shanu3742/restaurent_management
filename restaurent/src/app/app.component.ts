@@ -1,24 +1,12 @@
-import { Component } from '@angular/core';
-import { LoggingService } from './services/logging.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers:[LoggingService]
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'restaurent';
-  /**
-   * default navigationPath is 
-   * recipes
-   */
-  navigateUrl:string='recipes';
-  constructor(private loggingService:LoggingService){}
-  ngOnInit(){
-    this.loggingService.logStatusChange('login')
-  }
-  handleNavigation(event:string){
-     this.navigateUrl = event;
-  }
+export class AppComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {}
 }
